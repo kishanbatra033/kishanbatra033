@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishan's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #8B008B;
+            color: #fff; }
+
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+            display: none;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+       
+        nav {
+            text-align: center;
+            background-color: #4B0082;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #6A5ACD;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KISHAN BATRA</h1>
+        <h4>Graphic Designer | VFX Artist</h4>
+    </header>
+
+   
+    <nav>
+        <a onclick="showSection('about')">About Me</a>
+        <div class="dropdown">
+            <a onclick="toggleDropdown('skills')">Skills</a>
+            <div id="skills" class="dropdown-content">
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Graphics Design</li>
+                    <li>Virtual Effects Passionate(e.g., React)</li>
+                    <li>Video and Photo Editor</li>
+                   
+                </ul>
+            </div>
+        </div>
+        <a onclick="showSection('education')">Education</a>
+        <a onclick="showSection('projects')">Projects</a>
+        <a onclick="showSection('hobbies')">Hobbies</a>
+        <a onclick="showSection('activities')">Extracurricular Activities</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+
+   
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio! I am a passionate web developer and a Graphic Designer with a focus on creating user-friendly and visually appealing websites.</p>
+    </section>
+
+    <section id="skills">
+       
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>Bachelor's of Computer Applications, 2020-2023 - 74.5%</p>
+<p>Intermediate, 2020 - 78.62% </p>
+<p>High School, 2018 - 88.5% </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div>
+            <h3>Project 1</h3>
+            <p>Railway Reservation System (Full Stack)</p>
+ 
+        </div>
+             
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <p>Exploring new technologies, reading, and hiking.</p>
+    </section>
+
+    <section id="activities">
+        <h2>Extracurricular Activities</h2>
+        <p>Member of the Creative Club, Hosted multiple events.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: kishan.2325MCA1166@kiet.edu</p>
+        <p>Phone No.: +91 99999999999</p>
+    </section>
+
+    <footer>
+        <p>Thanks for Visiting!!</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
